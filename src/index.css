@@ -76,14 +76,74 @@ body {
   .testgen {
     background-color: #ad2a21;
     text-align: center;
+    width:50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid white;
+  }
+
+  .testgen h1{
+    -webkit-text-stroke: 1.5px white;
+    font-family: 'Super Mario 256', sans-serif;
+    margin-top: 5px;
+    font-size: 45px;
+  }
+
+  .testgen label{
+    -webkit-text-stroke: 1.5px white;
+    font-family: 'Super Mario 256', sans-serif;
+    margin-top: 5px;
+    font-size: 25px;
+  }
+
+  .testgen select{
+    font-size: 25px;
+    font-family: 'Super Mario 256', sans-serif;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: .25rem;;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .testgen input{
+    font-size: 25px;
+    font-family: 'Super Mario 256', sans-serif;
+    -webkit-text-stroke: 1px white;
+    background-color: #750b06;
+    color: white;
+    letter-spacing: .25rem;;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid white;
   }
 
   .leaderboard {
     background-color: #ad2a21;
     text-align: center;
+    width:50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 3px solid white;
+  }
+
+  .leaderboard h1{
+    -webkit-text-stroke: 1.5px white;
+    font-family: 'Super Mario 256', sans-serif;
+    margin-top: 5px;
   }
 
   .credits {
     background-color: #ad2a21;
     text-align: center;
+    width: 49%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 2px solid white;
+    
+  }
+
+  .credits h1{
+    -webkit-text-stroke: 1.5px white;
+    font-family: 'Super Mario 256', sans-serif;
+    margin-top: 5px;
   }

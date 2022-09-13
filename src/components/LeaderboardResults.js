@@ -5,6 +5,7 @@ function LeaderboardResults() {
         <div>
             <div>
             <h1>Leaderboard Results</h1>
+            <br></br>
             </div>
         </div>
     );
