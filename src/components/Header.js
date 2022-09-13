@@ -3,21 +3,21 @@ import { NavLink, Link } from "react-router-dom";
 
 function Header() {
     return (
-        <header>
-      <h1>
+        <header id="allheader">
+      <h1 id="header">
         <Link to="/">
-          <span className="logo">{"//"}</span>
-          Toad Game
+          <span id="title" hidden="true">{"//"}</span>
+          Toad's Tempestuous Test!
         </Link>
       </h1>
-      <nav>
-        <NavLink className="button" exact to="/">
+      <nav id="navbar">
+        <NavLink className="navbtn" exact to="/">
           New Game
         </NavLink>
-        <NavLink className="button" to="/Leaderboard">
+        <NavLink className="navbtn" to="/Leaderboard">
           Leaderboards
         </NavLink>
-        <NavLink className="button" to="/Credits">
+        <NavLink className="navbtn" to="/Credits">
           Credits
         </NavLink>
       </nav>

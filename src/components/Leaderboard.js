@@ -3,7 +3,7 @@ import LeaderboardResults from "./LeaderboardResults";
 
 function Leaderboard() {
     return (
-        <div>
+        <div className="leaderboard">
             <LeaderboardResults />
         </div>
     );

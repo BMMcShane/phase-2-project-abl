@@ -3,7 +3,7 @@ import AllQuestions from "./AllQuestions";
 
 function TestGen() {
     return (
-        <div>Test Generator
+        <div className="testgen">Test Generator
             <AllQuestions />
         </div>
     );
