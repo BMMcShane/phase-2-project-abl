@@ -3,7 +3,7 @@ import React from "react";
 function IndivQuestion() {
     return (
         <div>
-            <h1>Hello World!</h1>
+            Question 1, Question 2, Question 3
         </div>
     );
 }

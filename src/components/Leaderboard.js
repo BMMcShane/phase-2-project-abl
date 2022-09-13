@@ -1,9 +1,10 @@
 import React from "react";
+import LeaderboardResults from "./LeaderboardResults";
 
 function Leaderboard() {
     return (
         <div>
-            <h1>Are you stalking me?!</h1>
+            <LeaderboardResults />
         </div>
     );
 }

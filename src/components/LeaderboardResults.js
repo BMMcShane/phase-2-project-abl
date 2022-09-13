@@ -3,7 +3,9 @@ import React from "react";
 function LeaderboardResults() {
     return (
         <div>
-            <h1>Hello Again!</h1>
+            <div>
+            <h1>Leaderboard Results</h1>
+            </div>
         </div>
     );
 }

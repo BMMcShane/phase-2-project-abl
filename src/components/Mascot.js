@@ -3,7 +3,7 @@ import React from "react";
 function Mascot() {
     return (
         <div>
-            <h1>Hello Again Again!</h1>
+            <h1>Mascot Component</h1>
         </div>
     );
 }

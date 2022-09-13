@@ -1,11 +1,13 @@
 import React from "react";
 
 function Credits() {
-    return(
+    return (
         <div>
-            <h1>We have to stop meeting like this!</h1>
+            <div>
+            <h1>Credits - all glory to the team</h1>
+            </div>
         </div>
-    );
+    )
 }
 
 export default Credits;

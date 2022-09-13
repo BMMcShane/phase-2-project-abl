@@ -3,7 +3,7 @@ import IndivQuestion from "./IndivQuestion";
 
 function AllQuestions() {
     return (
-        <div>
+        <div> All Test Questions
             <IndivQuestion />
         </div>
     );

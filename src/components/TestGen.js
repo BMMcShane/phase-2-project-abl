@@ -1,9 +1,10 @@
 import React from "react";
+import AllQuestions from "./AllQuestions";
 
 function TestGen() {
     return (
-        <div>
-            <h1>Haha... Hey!</h1>
+        <div>Test Generator
+            <AllQuestions />
         </div>
     );
 }
