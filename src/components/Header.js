@@ -6,7 +6,7 @@ function Header() {
         <header id="allheader">
       <h1 id="header">
         <Link to="/">
-          <span id="title" hidden="true">{"//"}</span>
+          <span id="title" hidden={true}>{"//"}</span>
           Toad's Tempestuous Test!
         </Link>
       </h1>

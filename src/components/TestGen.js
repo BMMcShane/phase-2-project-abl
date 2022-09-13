@@ -6,7 +6,7 @@ function TestGen() {
         <div className="testgen">
             <h1>Choose Your Test!</h1>
             <form action="">
-                <label for="categories">Choose a Category:</label>
+                <label>Choose a Category:</label>
                 <br></br>
                 <select id="categories" name="categories">
                     <option value="Geography">Geography</option>
@@ -15,7 +15,7 @@ function TestGen() {
                 </select>
                 <br></br>
                 <br></br>
-                <label for="difficulties">Choose a Difficulty:</label>
+                <label>Choose a Difficulty:</label>
                 <br></br>
                 <select id="difficulties" name="difficulties">
                     <option value="Easy">Easy</option>
