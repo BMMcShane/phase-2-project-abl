@@ -1,36 +1,36 @@
-import React from "react";
+import React, {useState, useHistory} from "react";
 import AllQuestions from "./AllQuestions";
-
-function TestGen() {
+import { Switch, Route } from "react-router-dom";
+import TestSelector from "./TestSelector";
+function TestGen({questions}) {
+    // const history = useHistory();
+    const [testCategory, setTestCategory] = useState("Geography");
+    const [testDifficulty, setTestDifficulty] = useState("Easy");
+    function handleCategoryChange (e) {
+        setTestCategory(e.target.value)
+        return testCategory
+    }
+    function handleDifficultyChange (e) {
+        setTestDifficulty(e.target.value)
+        return testDifficulty
+    }
+    // console.log(questions);
+    // const questionsToDisplay = questions.map(question => {
+    //     if (question.difficulty == testDifficulty) {
+    //         return <div>{question.question}</div>
+    //     }
+    // })
     return (
         <div className="testgen">
-            <h1>Choose Your Test!</h1>
-            <form action="">
-                <label>Choose a Category:</label>
-                <br></br>
-                <select id="categories" name="categories">
-                    <option value="Geography">Geography</option>
-                    <option value="Math">Math</option>
-                    <option value="history">History</option>
-                </select>
-                <br></br>
-                <br></br>
-                <label>Choose a Difficulty:</label>
-                <br></br>
-                <select id="difficulties" name="difficulties">
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                </select>
-                <br></br>
-                <br></br>
-                <input type="submit" value=" Start! "></input>
-            </form>
-            <br></br>
-            <AllQuestions />
-            <br></br>
+            {/* <Switch>
+                <Route exact path="/"> */}
+                    <TestSelector handleCategoryChange={handleCategoryChange} handleDifficultyChange={handleDifficultyChange}/>
+                {/* </Route>
+                <Route path="/?">    */}
+                    <AllQuestions questions={questions}/>
+                {/* </Route>
+            </Switch> */}
         </div>
     );
 }
-
-export default TestGen;
+export default TestGen

@@ -1,12 +1,20 @@
 import React from "react";
 import IndivQuestion from "./IndivQuestion";
-
-function AllQuestions() {
+function AllQuestions({questions}) {
+    console.log(questions);
     return (
         <div>
-            <IndivQuestion />
+            {
+            questions.map(question => {
+                return (
+                <div>
+                <h1 key={question.id}>{question.question}</h1>
+                <input type="text" name="answer"></input>
+                </div>
+                )
+            })
+            }
         </div>
     );
 }
-
 export default AllQuestions;
