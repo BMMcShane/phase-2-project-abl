@@ -26,7 +26,7 @@ function App(){
                 </Route>
                 <Route exact path="/">
                     <BrowserRouter>
-                    <TestGen questions={questions}/>
+                    <TestGen className="testen" questions={questions}/>
                     </BrowserRouter>
                 </Route>
             </Switch>
