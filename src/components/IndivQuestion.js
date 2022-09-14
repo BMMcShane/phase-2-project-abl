@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 
 function IndivQuestion({question}) {
+    console.log(question)
+    const [newAnswers, setNewAnswers] = useState([])
+    let shuffledAnswers = [];
     let answers = [];
     let randomAnswers = [];
 
@@ -13,7 +16,7 @@ function IndivQuestion({question}) {
     };
 
     function shuffleAnswers(answers) {
-        console.log(answers);
+        console.log(`old answers ${answers}`);
         for (var i = answers.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
             var temp = answers[i];
@@ -21,29 +24,39 @@ function IndivQuestion({question}) {
             answers[j] = temp;
             let randomAnswers = answers[i]
             };
-        console.log(answers);
+            for (var j = 0; j < answers.length + 1; j++) {
+                console.log(answers[j])
+                if (answers[j] !== undefined) {
+                    shuffledAnswers.push(answers[j]);
+            }}
+            
+            console.log(shuffledAnswers);
       };
+
+      console.log(newAnswers)
     return (
         <div className="questions">
         <h2 key={question.id}>{question.question}</h2>
-            <div className="column-one">
-                <label className="answer" id="answer1">
-                <input type="radio" name="answer"/> {answers[0]}
+        {buildAnswerArray(question)}
+            <div className="column-three">
+                <label className="answerleft">
+                <input type="radio" name="answer"/> {shuffledAnswers[0]}
                 </label>
-                <br/>
-                <br/>
-                <label className="answer" id="answer2">
-                <input type="radio" name="answer"/>{answers[1]}
+                {/* <br/>
+                <br/> */}
+                <label className="answerright">
+                <input type="radio" name="answer"/>{shuffledAnswers[1]}
                 </label>
             </div>
-            <div className="column-two">
-                <label className="answer" id="answer3">
-                <input type="radio" name="answer"/>{answers[2]}
+            <br/>
+            <div className="column-four">
+                <label className="answerleft">
+                <input type="radio" name="answer"/>{shuffledAnswers[2]}
                 </label>
-                <br/>
-                <br/>
-                <label className="answer" id="answer4">
-                <input type="radio" name="answer"/>{answers[3]}
+                {/* <br/>
+                <br/> */}
+                <label className="answerright">
+                <input type="radio" name="answer"/>{shuffledAnswers[3]}
                 </label>
             </div>
         </div>

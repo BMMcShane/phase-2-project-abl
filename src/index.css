@@ -2,18 +2,12 @@ body {
     background-color: #d4453b;
     background-image: url(./images/BackMush.webp);
     background-blend-mode: multiply;
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
     backdrop-filter: blur(10px);
-}
-
-.app {
-    background-color: #d4453b;
-    background-image: url(./images/BackMush.webp);
-    background-blend-mode: multiply;
-    background-size: contain;
-    background-repeat: repeat;
-    backdrop-filter: blur(10px);
+    height:100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
   
 a:link{text-decoration: none;}
@@ -149,13 +143,35 @@ select{
     font-family: 'Super Mario 256', sans-serif;
     overflow: hidden;
 }
-.answer {
-margin: 15px;
-font-size: 30px;
+.answerleft {
+/* margin: 15px; */
+font-size: 25px;
+width:49%;
+text-align: center;
+float: left;
 }
-.answer:hover {
+.answerright{
+/* margin: 15px; */
+font-size: 25px;
+width:49%;
+text-align: center;
+float: right;
+}
+.answerleft:hover {
     background-color: #852019;
     border: 2px white outset;
+}
+.answerright:hover {
+    background-color: #852019;
+    border: 2px white outset;
+}
+.answerleft:active {
+    border: 2px white inset;
+    background-color: #621711;
+}
+.answerright:active {
+    border: 2px white inset;
+    background-color: #621711;
 }
 input[type="radio"] {
     accent-color: black;
@@ -173,6 +189,14 @@ input[type="radio"] {
 #testsubmit:active {
     color: lightgray;
     border: 4px white inset;
+}
+.column-three {
+    float: top;
+    overflow: hidden;
+}
+.column-four {
+    float:bottom;
+    overflow: hidden;
 }
 
 #resultstotal {
