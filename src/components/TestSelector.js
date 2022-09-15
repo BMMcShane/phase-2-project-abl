@@ -1,19 +1,19 @@
 import React, {useState, useHistory} from "react";
 import AllQuestions from "./AllQuestions";
 import { Link, NavLink } from "react-router-dom";
-function TestSelector ({ handleCategoryChange, handleDifficultyChange, onToggleGaming, handleSubmit}) {
+function TestSelector ({ handleCategoryChange, handleDifficultyChange, onToggleGaming, handleStart, handleUsernameChange}) {
 
     return (
             <div>
                 <h1>Choose Your Test!</h1>
                 <hr />
                 <br />
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleStart}>
                     <label>Choose a Category:</label>
                     <br></br>
                     <select id="categories" name="categories" onChange={handleCategoryChange}>
-                        <option>-</option>
-                        <option value="">General Knowledge</option>
+                        <option value="General Knowlege">-</option>
+                        <option value="General Knowledge">General Knowledge</option>
                         <option value="">Arts and Literature</option>
                         <option value="">Film and TV</option>
                         <option value="">Food and Drink</option>
@@ -29,14 +29,16 @@ function TestSelector ({ handleCategoryChange, handleDifficultyChange, onToggleG
                     <label>Choose a Difficulty:</label>
                     <br></br>
                     <select id="difficulties" name="difficulties" onChange={handleDifficultyChange}>
-                        <option>-</option>
-                        <option value="Easy">Easy</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Hard">Hard</option>
+                        <option value="hard">-</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
                     </select>
                     <br></br>
                     <br></br>
-                    <label>Choose Number of Questions:</label>
+                    <label>Enter your username:</label>
+                    <br></br>
+                    <input type="text" name="username" placeholder="Toad" onChange={handleUsernameChange}></input>
                     <br></br>
                     <input type="submit" value=" Start! "></input>
                 </form>

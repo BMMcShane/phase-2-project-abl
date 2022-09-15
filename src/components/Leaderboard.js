@@ -6,7 +6,7 @@ function Leaderboard({handleCategoryChange, handleDifficultyChange}) {
         <div className="leaderboard">
             <h1>Leaderboard</h1>
             <hr />
-            <label>Filters:</label>
+            {/* <label>Filters:</label>
             <select id="categories" onChange={handleCategoryChange}>
                 <option value="">Any Category</option>
                 <option value="">General Knowledge</option>
@@ -26,23 +26,27 @@ function Leaderboard({handleCategoryChange, handleDifficultyChange}) {
                 <option value="Medium">Medium</option>
                 <option value="Hard">Hard</option>
             </select>
-            <br></br>
-            <br></br>
-            <div className="leaderboardSubmission">
-                <h2 className="name">Name</h2>
-                <hr/>
-                <div className="column-one">
-                    <h3>Ranking:</h3>
-                    <h4>Placeholder</h4>
-                    <h3>Score:</h3>
-                    <h4>Placeholder</h4>
-                </div><div className="column-two">
-                    <h3>Difficulty:</h3>
-                    <h4>Placeholder</h4>
-                    <h3>Category:</h3>
-                    <h4>Placeholder</h4>
-                </div>
-            </div>
+            <br></br> */}
+            {/* <br></br> */}
+            <table className="leaderboard-scores">
+                <tr id="leaderboard-categories">
+                    <th>Ranking</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Difficulty</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+            <hr/>
+            <table className="leaderboard-scores">
+                <tr className="userData">
+                    <td>ranking</td>
+                    <td>name</td>
+                    <td>category</td>
+                    <td>difficulty</td>
+                    <td>score</td>
+                </tr>
+            </table>
         </div>
     );
 }
