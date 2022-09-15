@@ -3,11 +3,19 @@ import AllQuestions from "./AllQuestions";
 import { Routes, Route } from "react-router-dom";
 import TestSelector from "./TestSelector";
 import IndivQuestion from "./IndivQuestion";
-function TestGen({questions}) {
+function TestGen() {
     // const history = useHistory();
-    const [testCategory, setTestCategory] = useState("Geography");
-    const [testDifficulty, setTestDifficulty] = useState("Easy");
+    const [testCategory, setTestCategory] = useState("");
+    const [testDifficulty, setTestDifficulty] = useState("");
+    const [questions, setQuestions] = useState([])
     const [gaming, setGaming] = useState(false);
+    function handleSubmit(e) {
+        e.preventDefault()
+        toggleGaming();
+    fetch(`https://the-trivia-api.com/api/questions?categories=${testCategory}&limit=10&difficulty=${testDifficulty}`)
+    .then(response => response.json())
+    .then(setQuestions)
+}
     function handleCategoryChange (e) {
         setTestCategory(e.target.value)
         return testCategory
@@ -30,7 +38,8 @@ function TestGen({questions}) {
             <TestSelector
                 handleCategoryChange={handleCategoryChange}
                 handleDifficultyChange={handleDifficultyChange}
-                onToggleGaming={toggleGaming} />
+                onToggleGaming={toggleGaming} 
+                handleSubmit={handleSubmit}/>
         </div>
     )
 }

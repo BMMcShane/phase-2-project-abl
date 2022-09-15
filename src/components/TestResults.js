@@ -1,11 +1,49 @@
 import React from "react";
 
-function TestResults() {
+function TestResults({ onAddLeader, difficulty, category}) {
+   
+    function scoreCalc({correct, difficulty}){
+        if (difficulty==='easy'){
+            return correct * 5
+        }
+        else if(difficulty==='hard'){
+            return correct * 15
+        }
+        else if(difficulty==='medium'){
+            return correct * 10
+        }
+    }
 
-    function getTopThree() {
-
-    };
-
+    const [formData, setFormData] = useState({
+        name: "",
+        'score': scoreCalc,
+        'difficulty': difficulty,
+        'category': category,
+      });
+      function handleChange(event) {
+        setFormData({
+          ...formData,
+          [event.target.name]: event.target.value,
+        });
+      }
+      function handleSubmit() {
+        const newLeader = {
+          name: formData.name,
+          score: formData.score,
+          difficulty: formData.difficulty,
+          category: formData.category,
+        };
+        fetch("", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newLeader),
+        })
+          .then((r) => r.json())
+          .then(onAddLeader);
+      };
+      
     return (
         <div id="resultstotal">
             <h1>Test Results</h1>
