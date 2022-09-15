@@ -2,7 +2,7 @@ import Header from "./Header";
 import TestGen from "./TestGen";
 import Leaderboard from "./Leaderboard";
 import Credits from "./Credits";
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import {useState, useEffect}   from "react";
 import {useHistory} from "react-router-dom";
 function App(){
@@ -17,19 +17,11 @@ function App(){
     return (
         <div className="App">
             <Header />
-            <Switch>
-                <Route path="/Leaderboard">
-                    <Leaderboard />
-                </Route>
-                <Route path="/Credits">
-                    <Credits />
-                </Route>
-                <Route exact path="/">
-                    <BrowserRouter>
-                    <TestGen className="testen"/>
-                    </BrowserRouter>
-                </Route>
-            </Switch>
+            <Routes>
+                <Route path="/" element={<TestGen/>} />
+                <Route path="/Leaderboard" element={<Leaderboard/>} />
+                <Route path="/Credits" element={<Credits/>} />
+            </Routes>
         </div>
     );
 }
