@@ -1,7 +1,5 @@
-import React, {useState, useHistory} from "react";
-import AllQuestions from "./AllQuestions";
-import { Link, NavLink } from "react-router-dom";
-function TestSelector ({ handleCategoryChange, handleDifficultyChange, onToggleGaming, handleStart, handleUsernameChange}) {
+import React from "react";
+function TestSelector ({ handleCategoryChange, handleDifficultyChange, handleStart, handleUsernameChange}) {
 
     return (
             <div>
@@ -12,17 +10,12 @@ function TestSelector ({ handleCategoryChange, handleDifficultyChange, onToggleG
                     <label>Choose a Category:</label>
                     <br></br>
                     <select id="categories" name="categories" onChange={handleCategoryChange}>
-                        <option value="General Knowlege">-</option>
+                        <option value="General Knowledge">-</option>
                         <option value="General Knowledge">General Knowledge</option>
-                        <option value="">Arts and Literature</option>
-                        <option value="">Film and TV</option>
-                        <option value="">Food and Drink</option>
-                        <option value="">Geography</option>
-                        <option value="">History</option>
-                        <option value="">Music</option>
-                        <option value="">Science</option>
-                        <option value="">Society and Culture</option>
-                        <option value="">Sports and Leisure</option>
+                        <option value="Geography" >Geography</option>
+                        <option value="History">History</option>
+                        <option value="Music">Music</option>
+                        <option value="Science">Science</option>
                     </select>
                     <br></br>
                     <br></br>

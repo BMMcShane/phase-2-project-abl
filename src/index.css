@@ -94,8 +94,6 @@ a:active{text-decoration: none;}
     margin-left: 25%;
     margin-right: 25%;
     border: 3px outset white;
-    /* background-size: contain; */
-
 }
 .testgen h1{
     -webkit-text-stroke: 1.5px white;
@@ -145,14 +143,12 @@ select{
     overflow: hidden;
 }
 .answerleft {
-/* margin: 15px; */
 font-size: 25px;
 width:49%;
 text-align: center;
 float: left;
 }
 .answerright{
-/* margin: 15px; */
 font-size: 25px;
 width:49%;
 text-align: center;
@@ -200,51 +196,6 @@ input[type="radio"] {
     overflow: hidden;
 }
 
-/* #resultstotal {
-    overflow: hidden;
-    display: inline;
-    font-family: 'Super Mario 256', sans-serif;
-    letter-spacing: .20rem;
-}
-#resultstotal:after {
-    content: "";
-    display: table;
-    clear: both;   
-}
-#resultsmascot {
-    float: left;
-    width: 29%;
-    border: 3px white outset;
-    background-color: #88090d;
-    color: white;
-}
-#testresults {
-    float: left;
-    width:40%;
-    -webkit-text-stroke: 1px white;
-}
-#testresults h3{
-    color: white;
-    -webkit-text-stroke: 1.5px black;
-    font-size: 25px;
-}
-#resultsleaderboard {
-    float: right;
-    width: 29%;
-    border: 3px white outset;
-    background-color: #0c178d;
-    color: white;
-}
-#resultsleaderboard h3{
-    margin-bottom: 0px;
-}
-#resultsleaderboard input{
-    background-color: white;
-    color: #0c178d;
-    width: 90%;
-} */
-
-
 .leaderboard {
     background-color: #ad2a21;
     text-align: center;
@@ -252,9 +203,6 @@ input[type="radio"] {
     margin-left: 25%;
     margin-right: 25%;
     border: 3px solid white;
-    /* background-size: contain; */
-    /* overflow: ; */
-
 }
 .leaderboard h1{
     -webkit-text-stroke: 1.5px white;
@@ -276,15 +224,17 @@ input[type="radio"] {
     font-size: 25px;
     color:black;
     -webkit-text-stroke: 1.5px white;
-    /* display: inline; */
-    /* justify-content: center; */
     overflow: hidden;
     border-bottom: 2px white solid;
     margin-bottom: 10px;
 
 }
-#leaderboard-categories th{
-    margin: auto;
+.userData{
+    font-family: 'Super Mario 256', sans-serif;
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+    font-size: 20px;
+
 }
 
 

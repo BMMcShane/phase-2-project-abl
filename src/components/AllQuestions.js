@@ -1,11 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import IndivQuestion from "./IndivQuestion";
+import {useNavigate} from "react-router-dom";
 
-function AllQuestions({questions, handleEnd}) {
+function AllQuestions({questions, handleEnd, username, testCategory, testDifficulty}) {
     let cheatSheet = [];
     let submittedAnswers = [];
     let score;
-    // const [submittedAnswer, setSubmittedAnswer] = useState("")
+    let adjustedScore;
+    const navigate= useNavigate();
 
     function buildCheatSheet(questions) {
         cheatSheet.length = 0 ; 
@@ -16,8 +18,6 @@ function AllQuestions({questions, handleEnd}) {
         buildSubmittedAnswerArray();
     };
     
-    // function handleInputChange() {
-    // };
     function buildSubmittedAnswerArray() {        
         let answer1 = document.getElementById(1).textContent;
         let answer2 = document.getElementById(2).textContent;
@@ -33,14 +33,43 @@ function AllQuestions({questions, handleEnd}) {
         console.log(submittedAnswers);
         compareAnswers(cheatSheet, submittedAnswers);
     };
+
     function compareAnswers(correct, submitted) {
         let intersection = correct.filter(x => submitted.includes(x));
         let score = intersection.length;
         console.log(score);
-        // handleEnd();
+        navigate("/Leaderboard");
+        calcAdjustedScore(score);
+    };
+    function calcAdjustedScore(score) {
+        if (testDifficulty === 'easy'){
+            adjustedScore = score * 5
+        } else if(testDifficulty==='hard'){
+            adjustedScore = score * 15
+        } else if(testDifficulty==='medium'){
+            adjustedScore = score * 10
+        }
+        postUserData(adjustedScore);
+
+    };
+
+    function postUserData(string) {
+        fetch("http://localhost:4000/leaders", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                "ranking": "ranking",
+                "username": username,
+                "category": testCategory,
+                "difficulty": testDifficulty,
+                "score": string
+            })
+        }).then((r) => r.json())
+        .then(console.log)
     };
 
     let count = 0
+
     return (
         <div onLoad={() => buildCheatSheet(questions)}>
             {

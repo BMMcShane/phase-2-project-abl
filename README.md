@@ -11,12 +11,7 @@ As a User, I can click to navigate between the test generator, the leaderboard, 
 
 # Wireframe
 
-# Ideas
-1. Quiz site
-    a. Trivia API - 3 difficulties
-    b. Header, question, question box, nav bar, answer
-    c. Want - drop down or input to generate so many Qs
-    d. Want - leaderboard of somekind
-    e. Want - Categories
-    f. Want - Click on mascot to swap page css to pink and images of mascot to other mascot
-    g. Click navigate routes between credits, leaderboard, and test gen.
+# Commands to Run:
+npm install
+json-server -p 4000 leaderboard.json
+npm start
