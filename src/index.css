@@ -199,9 +199,9 @@ input[type="radio"] {
 .leaderboard {
     background-color: #ad2a21;
     text-align: center;
-    width:50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width:70%;
+    margin-left: 15%;
+    margin-right: 15%;
     border: 3px solid white;
 }
 .leaderboard h1{
@@ -211,17 +211,23 @@ input[type="radio"] {
     letter-spacing: .55rem;
     font-size: 45px;
     margin-bottom: 0px;
+    /* text-decoration: underline; */
 }
 .leaderboard-scores{
     width: 100%;
     justify-content: center;
     letter-spacing: .25rem;
+    table-layout: fixed;
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    border-collapse: collapse;
+
 }
 #leaderboard-categories{
     width:100%;
     text-align: center;
     font-family: 'Super Mario 256', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     color:black;
     -webkit-text-stroke: 1.5px white;
     overflow: hidden;
@@ -234,7 +240,16 @@ input[type="radio"] {
     color: white;
     -webkit-text-stroke: 1.5px black;
     font-size: 20px;
-
+    margin-bottom: 15px;
+    height:40px;
+    border: 2px white outset;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 30px;
+}
+.rankno{
+    font-size: 30px;
 }
 
 

@@ -8,28 +8,37 @@ function Leaderboard({handleCategoryChange, handleDifficultyChange}) {
 
     fetch("http://localhost:4000/leaders")
     .then((r) => r.json())
-    .then(setUserResults)
-    
-
+    .then((data) => {
+        dataSort(data);
+    })   
+    function dataSort(data) {
+    let sortedData = data;
+    sortedData = [...data].sort((a, b) => b.score - a.score);
+    setUserResults(sortedData)
+};
+let count = 0;
     return (
         <div className="leaderboard">
-            <h1>Leaderboard</h1>
+            <h1>Leaderboard:</h1>
             <hr />
+            <br/>
             <table className="leaderboard-scores">
                 <tr id="leaderboard-categories">
-                    <th>Ranking</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Difficulty</th>
-                    <th>Score</th>
+                    <th>Ranking:</th>
+                    <th>Name:</th>
+                    <th>Category:</th>
+                    <th>Difficulty:</th>
+                    <th>Score:</th>
                 </tr>
             {
             userResults.map(userResult => {
-               return <LeaderboardResults key={userResult.id} userResult={userResult}/>;
+                let rankingNo = count +1;
+                count++;
+               return <LeaderboardResults key={userResult.id} userResult={userResult} rankingNo={rankingNo}/>;
             })
             }
             </table>
-            <hr/>
+            {/* <hr/> */}
         </div>
     );
 }

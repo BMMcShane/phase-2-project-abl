@@ -15,22 +15,6 @@
       "category": "General Knowledge",
       "difficulty": "easy",
       "score": 1
-    },
-    {
-      "ranking": "ranking",
-      "username": "Ben",
-      "category": "History",
-      "difficulty": "hard",
-      "score": 6,
-      "id": 3
-    },
-    {
-      "ranking": "ranking",
-      "username": "",
-      "category": "History",
-      "difficulty": "medium",
-      "score": 40,
-      "id": 4
     }
   ]
 }
