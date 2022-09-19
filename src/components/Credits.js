@@ -10,7 +10,7 @@ function Credits() {
             <h2>Ben     -   Chief Artistic Talent / CSS Savant</h2>
             <h2>Luke "Danger" Chamley   -   Supreme Database Gremlin</h2>
             <br></br>
-            <h3>Extra Special Thanks to "The Trivia API" for making this all possible, as well as Nintendo, for the creation of the perfect specimen known as Toad Mario.</h3>
+            <h3>Extra Special Thanks to "The Trivia API" for making this all possible; as well as Nintendo, for the creation of the perfect specimen known as Toad Mario.</h3>
             </div>
         </div>
     )

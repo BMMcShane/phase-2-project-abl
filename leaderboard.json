@@ -15,6 +15,70 @@
       "category": "General Knowledge",
       "difficulty": "easy",
       "score": 1
+    },
+    {
+      "ranking": "ranking",
+      "username": "f53",
+      "category": "General Knowledge",
+      "difficulty": "medium",
+      "score": 70,
+      "id": 3
+    },
+    {
+      "ranking": "ranking",
+      "username": "Kon",
+      "category": "General Knowledge",
+      "difficulty": "easy",
+      "score": 50,
+      "id": 4
+    },
+    {
+      "ranking": "ranking",
+      "username": "Kon",
+      "category": "General Knowledge",
+      "difficulty": "hard",
+      "score": 90,
+      "id": 5
+    },
+    {
+      "ranking": "ranking",
+      "username": "Toad's Toad",
+      "category": "Science",
+      "difficulty": "easy",
+      "score": 50,
+      "id": 6
+    },
+    {
+      "ranking": "ranking",
+      "username": "toad's stool",
+      "category": "Geography",
+      "difficulty": "hard",
+      "score": 105,
+      "id": 7
+    },
+    {
+      "ranking": "ranking",
+      "username": "big sis",
+      "category": "Geography",
+      "difficulty": "hard",
+      "score": 60,
+      "id": 8
+    },
+    {
+      "ranking": "ranking",
+      "username": "big dog",
+      "category": "Music",
+      "difficulty": "hard",
+      "score": 60,
+      "id": 9
+    },
+    {
+      "ranking": "ranking",
+      "username": "Flatiron",
+      "category": "Music",
+      "difficulty": "hard",
+      "score": 90,
+      "id": 10
     }
   ]
 }
