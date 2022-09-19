@@ -6,7 +6,7 @@ function Leaderboard({handleCategoryChange, handleDifficultyChange}) {
     const [userResults, setUserResults] = useState([]);
     
 
-    fetch("https://toad-test-abl.herokuapp.com/leaders", {mode: "no-cors"})
+    fetch("https://toad-test-abl.herokuapp.com/leaders")
     .then((r) => r.json())
     .then((data) => {
         dataSort(data);
