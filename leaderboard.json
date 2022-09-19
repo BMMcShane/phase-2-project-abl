@@ -79,6 +79,14 @@
       "difficulty": "hard",
       "score": 90,
       "id": 10
+    },
+    {
+      "ranking": "ranking",
+      "username": "Ben",
+      "category": "History",
+      "difficulty": "easy",
+      "score": 15,
+      "id": 11
     }
   ]
 }

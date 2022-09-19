@@ -54,7 +54,7 @@ function AllQuestions({questions, handleEnd, username, testCategory, testDifficu
     };
 
     function postUserData(string) {
-        fetch("http://localhost:4000/leaders", {
+        fetch("https://toad-test-abl.herokuapp.com/leaders", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

@@ -6,7 +6,7 @@ function Leaderboard({handleCategoryChange, handleDifficultyChange}) {
     const [userResults, setUserResults] = useState([]);
     
 
-    fetch("http://localhost:4000/leaders")
+    fetch("https://toad-test-abl.herokuapp.com/leaders")
     .then((r) => r.json())
     .then((data) => {
         dataSort(data);
